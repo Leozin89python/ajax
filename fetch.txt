@@ -1,0 +1,71 @@
+					fetch example uses
+					------------------
+
+
+
+--------------------------------------------------------------------
+get:
+
+url = 'http://localhost:8080/exemplo
+
+fetch(url)
+.then((response) => response.json())
+.then((data) => console.log(data))
+.catch(err => console.log('error:' + err))
+--------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------
+post:
+
+url = 'http://localhost:8080/exemplo
+
+fetch(url,{
+	method :'Post',
+	body :JSON.stringfy({fakedata :1}),
+    	headers :{
+		'Content-type' :'application/json'
+	}
+})
+.then(
+	(response) => response.json())
+.then((data) => console.log(data))
+.catch(err => console.log('error:' + err))
+--------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------
+put:
+
+url = 'http://localhost:8080/exemplo/1
+
+fetch(url,{
+	method :'Put',
+	body :JSON.stringfy({fakedata :200, id :1}),
+    	headers :{
+		'Content-type' :'application/json'
+	}
+})
+.then(
+	(response) => response.json())
+.then((data) => console.log(data))
+.catch(err => console.log('error:' + err))
+--------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------
+delete:
+
+url = 'http://localhost:8080/exemplo/1
+
+fetch(url,{
+	method :'delete'
+})
+.then(
+	(response) => response.json())
+.then((data) => console.log(data))
+.catch(err => console.log('error:' + err))
+--------------------------------------------------------------------
