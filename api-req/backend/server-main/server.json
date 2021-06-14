@@ -1,0 +1,18 @@
+[
+    {
+        "system":"Logistics Control",
+        "service":"control of scm and distribution",
+        "price":"2.356,00 $/M  |  35.254,00 $"
+    },
+    {
+        "system":"Super Market Management",
+        "service":"management of market products",
+        "price":"324,00 $/M  |  7.356,00 $"
+    },
+    {
+        "system":"ERP",
+        "service":"management of all areas to your enterprise",
+        "price":"7.514,00 $/M  |  455.123,00 $"
+    }
+    
+]

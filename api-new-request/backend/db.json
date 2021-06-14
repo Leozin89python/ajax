@@ -1,0 +1,32 @@
+[
+    {
+        "nome": "Moto G plus",
+        "promo": "por apenas:",
+        "preco": "904,23 R$"
+    },
+    {
+        "nome": "galaxy j5 prime",
+        "promo": "por apenas:",
+        "preco": "836,56 R$"
+    },
+    {
+        "nome": "galaxy j1 mini",
+        "promo": "por apenas:",
+        "preco": "525,97 R$"
+    },
+    {
+        "nome": "Iphone VI",
+        "promo": "por apenas:",
+        "preco": "5.254,54 R$"
+    },
+    {
+        "nome": "Moto X",
+        "promo": "por apenas:",
+        "preco": "956,54 R$"
+    },
+    {
+        "nome": "Moto Z play",
+        "promo": "por apenas:",
+        "preco": "1024,97 R$"
+    }
+]

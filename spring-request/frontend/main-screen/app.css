@@ -1,0 +1,48 @@
+html,body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+}
+header{
+    grid-area: header;
+    background-color: black;
+    color: whitesmoke;
+
+    padding: 10px;
+}
+header hr{
+    background-color: whitesmoke;
+    font-weight: bold;
+    height: 2px;
+}
+main{
+    grid-area: main;
+    background-image: url('../assets/paper.jpg');
+    background-size: 100% 100%; 
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: whitesmoke;
+
+    font-size: x-small;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+footer :first-child{
+    font-weight: bold;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr 20px;
+    grid-template-areas: 
+        'header header'
+        'main     main'
+        'footer footer'
+    ;
+}

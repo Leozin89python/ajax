@@ -1,0 +1,124 @@
+body,html{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+header{
+    grid-area: header;
+    border: solid 1px black;
+}
+.head{
+    background-color: pink;
+    font-weight: bolder;
+    border: solid 1px black;
+}
+nav{
+    grid-area: nav;
+    border: solid 1px black;
+
+    background: 	#FFB6C1;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding: 5px;
+}
+main{
+    grid-area: main;
+    border: solid 1px black;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    position: relative;
+}
+footer{
+    grid-area: footer;
+    border: solid 1px black;
+
+    background-color: pink;
+    font-weight: bolder;
+    font-size: smaller;
+
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+footer i{
+    padding: 5px;
+    margin-left: 50%;
+}
+body{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 50px 574px 50px;
+    grid-template-areas: 
+        'header header'
+        'nav      main'
+        'nav    footer'
+    ;
+}
+.img-1,.img-2,.img-3,.img-4{
+    margin: 40px 0;
+}
+.comic{
+  width: 99%;
+  height: 40%;
+  
+  margin: 3px 3px;
+
+  border: black 3px solid;
+}
+.comics-page{
+    height: 58%;
+    width: 99%;
+    margin: 3px 3px;
+
+    border: black 3px solid;
+}
+.table{
+    position: absolute;
+    top:150px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    width: 90%;
+    margin-left: 5%;
+    background:linear-gradient(63deg, pink 45%, red 55%) ;
+}
+.tb{
+    width: 80%;
+}
+.head{
+    border: whitesmoke 2px solid;
+}
+.tnome,.tpromo,.tpreco{
+    background: rgba(0,0,0,0.1);
+}
+.tbody{
+    background:linear-gradient(63deg, yellow 45%, gold 55%) ;
+    border: whitesmoke 2px solid;
+}
+#nome:hover{
+    background-color: rgba(0,0,0,0.1);
+    font-size: larger;
+    cursor: grab;
+}
+#promo:hover{
+    background-color: rgba(0,0,0,0.1); 
+    font-size: larger;
+    cursor: grab;
+}
+#preco:hover{
+    background-color: rgba(0,0,0,0.1); 
+    font-size: larger;
+    cursor: grab;
+}

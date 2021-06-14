@@ -1,0 +1,15 @@
+CREATE DATABASE systemII;
+
+DROP DATABASE systemII;
+
+CREATE TABLE IF NOT EXISTS products(
+	productId SERIAL PRIMARY KEY,
+	productName VARCHAR(255) NOT NULL,
+	quantity INTEGER NOT NULL,
+	price NUMERIC(5,2)
+);
+
+DROP TABLE products;
+
+SELECT * FROM products;
+

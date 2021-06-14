@@ -1,0 +1,23 @@
+[
+    {
+        "name":"Marry Pops",
+        "age":23,
+        "sex":"female",
+        "job":"secretary",
+        "adress":"5 Th, avenue, NY"
+    },
+    {
+        "name":"Jason Tex",
+        "age":43,
+        "sex":"male",
+        "job":"CEO",
+        "adress":"Manhattan, NY"
+    },
+    {
+        "name":"Jeff Janes",
+        "age":19,
+        "sex":"male",
+        "job":"driver",
+        "adress":"San Antonio, Texas"
+    }
+]

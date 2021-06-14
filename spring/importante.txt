@@ -1,0 +1,11 @@
+aplicação simples de relacionamento
+entre objetos.
+
+
+base de projeto:
+https://github.com/Leozin89python/sds2/tree/master/aula1
+
+
+endereço:
+http://localhost:8080/clients
+http://localhost:8080/address

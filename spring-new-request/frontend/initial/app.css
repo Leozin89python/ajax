@@ -1,0 +1,43 @@
+body,html{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+}
+header{
+    grid-area: header;
+    padding:10px;
+}
+main{
+    grid-area: main;
+    background-image: url('../assets/amazon.jpg');
+    background-size: 100% 100%;
+}
+footer{
+    grid-area: footer;
+    padding:10px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    font-weight: bold;
+    font-size: small;
+
+    position: relative;
+}
+footer i{
+    position: absolute;
+    bottom: 0;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr 50px;
+    grid-template-areas: 
+        'header header'
+        'main     main'
+        'footer footer'
+    ;
+}

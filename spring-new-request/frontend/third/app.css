@@ -1,0 +1,49 @@
+body,html{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+    padding:10px;
+
+    position: relative;
+}
+header{
+    position: sticky;
+    top: 0;
+
+    background-color: white;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+main table{
+    margin: 50px 0;
+    width: 80%;
+}
+main table thead{
+    background: black;
+    color: white;
+}
+main table tbody{
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+}
+main th{
+    padding: 10px;
+    border: solid 3px white;
+}
+th ul{
+    cursor: grab;
+    padding: 10px;
+    width: 100%;
+}
+th ul:hover{
+    background-color: rgba(0,0,0,0.1);
+}

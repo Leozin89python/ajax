@@ -1,0 +1,13 @@
+body{
+    background: rgba(0,0,0,0.7);
+}
+.titulo{
+    color: red;
+    margin: 0 200px;
+}
+#dados{
+    color: white;
+}
+#dados ul:hover{
+    color: cyan;
+}

@@ -1,0 +1,28 @@
+Mini app 
+
+spring-boot
+firebase
+html,css,js
+
+
+para demonstração no Linkedin e 
+agradecimento aos meus professores,
+Nélio Alves,
+Leonardo Moura
+e
+Felipe Mafra
+
+
+o app consiste em uma demonstração
+simples de uma tabela do banco de dados
+com possibilidade ou não de CRUD.
+
+uma tela de apresentação,
+uma tela de Login e uma tela de exibição e ou possivelmente crud dos dados.
+
+usarei para agradecer aos meus professores e demonstrar minhas habilidades em desenvolver soluções simples.
+
+fazer em dois idiomas, inglês e português.
+
+e se puder duas cores.
+

@@ -1,0 +1,2 @@
+implementar as consultas por comparação de preço
+usando a documentação do JPA .

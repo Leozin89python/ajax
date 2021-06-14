@@ -1,0 +1,44 @@
+body,html{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+header{
+    grid-area: header;
+    padding: 10px;
+    background-color: black;
+    color: whitesmoke;
+}
+.my-4{
+    border: whitesmoke solid 1px;
+    background: whitesmoke;
+}
+main{
+    grid-area: main;
+    border: black solid 1px;
+
+    background-image: url('/assets/wall.png');
+
+    width: 100%;
+}
+footer{
+    grid-area: footer;
+    border: black solid 1px;
+    background-color: black;
+    color: whitesmoke;
+}
+footer i {
+    font-size: x-small;
+    font-weight: bold;
+}
+body{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 250px  350px 50px;
+    grid-template-areas: 
+        'header header'
+        'main     main'
+        'footer footer' 
+    ;
+}

@@ -1,0 +1,118 @@
+body,html{
+   margin: 0;
+   width:100%; 
+   height: 100%;
+   overflow: hidden;
+}
+header{
+    grid-area: header;
+    background: linear-gradient(63deg, whitesmoke 45%, white 55%);
+    
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    font-size: xx-large;
+    font-family: fantasy;
+
+    text-decoration: underline;
+}
+nav{
+    grid-area: nav;
+
+    position: relative;
+
+    overflow:hidden ;
+}
+.anima{
+    background-color: red;
+    max-width: 60%;
+
+    margin: 5em 10%;
+
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+
+    padding: 5px;
+
+    color: red;
+
+    box-shadow: 3px 3px 3px black;
+    animation: move 0.7s ease-in-out alternate infinite;
+}
+.floor{
+    position: fixed;
+}
+main{
+    grid-area: main;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow-Y: scroll;
+
+    padding: 10px;
+}
+main h3{
+    position: absolute;
+    top: 100px;
+    margin-right: 70%;
+
+    text-decoration: underline;
+
+    font-family: fantasy;
+}
+main table{
+    border: rgba(0,0,0,0.4) solid 1px;
+
+    width: 80%;
+    margin-left: 3em;
+}
+main table thead{
+    background-color: black;
+    color: whitesmoke;
+}
+table tbody{
+    background-color: whitesmoke;
+    color: black;
+
+    padding: 10px;
+}
+footer{
+    grid-area: footer;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: x-large;
+    font-family: fantasy;
+
+    background-color: black;
+
+    color: whitesmoke;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 100px 425px 100px;
+    grid-template-areas: 
+        'header    nav'
+        'main      nav'
+        'footer footer'
+    ;
+}
+@keyframes move{
+    to{
+        transform: translateY(0px);
+    }from{
+        transform: translateY(350px);
+    }
+}
