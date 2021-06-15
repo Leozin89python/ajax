@@ -1,0 +1,105 @@
+.cb{
+    grid-area:cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgba(0, 0, 0, 0.1);
+}
+.cb :first-child{
+    border-radius: 50%;
+    background-color:  rgba(0, 0, 0, 0.2);
+    padding: 1em;
+}
+.nv{
+    grid-area:nv;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.nv :last-child{
+    margin: 118px 5px;
+    padding: 0.2em;
+    border: none;
+    border-radius: 3px;
+    outline-style: none;
+}
+.mn{
+    grid-area:mn;
+    padding: 1em;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.card div{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+.card div{
+    margin: 10px 10px;
+    height: 500px;
+    width: 300px;
+    padding: 1em;
+
+    border-radius: 3px;
+    background-color: black;
+    color: whitesmoke;
+    box-shadow: darkred 1px 4px 6px;
+
+    overflow: hidden;
+    
+    transition-property: all;
+    transition-duration:0.8s;
+ 
+}
+.card div:hover{
+    background-color: white;
+    color: black;
+    box-shadow: blue 1px 4px 6px; 
+}
+.card div h4{
+    text-align: center;
+}
+.card div h5{
+    background: darkred;
+    border-radius: 6px;
+    padding: 0.4em;
+}
+.card div :last-child{
+    padding: 1em;
+    background-color: darkgreen;
+    border-radius: 9px;
+}
+.card div button:hover{
+    background-color: darkred;
+    cursor: pointer;
+    color: whitesmoke;
+}
+.ft{
+    grid-area:ft;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+body{
+    background-color: whitesmoke;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    display: grid;
+    grid-template-columns:200px 1fr;
+    grid-template-rows: 115px 475px 35px;
+    grid-template-areas: 
+        'nv cb'
+        'nv mn'
+        'ft ft';
+}
