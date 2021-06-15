@@ -82,6 +82,10 @@
     cursor: pointer;
     color: whitesmoke;
 }
+#erro{
+    width: 80%;
+    font-size: xx-large;
+}
 .ft{
     grid-area:ft;
     color: white;
@@ -89,6 +93,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    font-size: smaller;
 }
 body{
     background-color: whitesmoke;

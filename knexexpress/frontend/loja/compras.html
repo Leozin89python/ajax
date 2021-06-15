@@ -6,11 +6,15 @@
     <link rel="stylesheet" href="compras.css" />
 </head>
 <body>
-    <button onclick="retornar(Event)">voltar</button>
-    <form>
-        <input placeholder="razão social/cnpj...">
-        <input placeholder="produtos...">
-        <input placeholder="quantidade...">
+    <button id="vt" onclick="retornar(Event)">voltar</button>
+    <form id="fr">
+        <input id ="rz" placeholder="razão social/cnpj...">
+        <input id ="mr" placeholder="mercadoria...">
+        <input id ="tf" placeholder="telefone...">
+        <input id ="el" placeholder="email...">
+        <input id ="ec" placeholder="endereco...">
+        <input id ="qt" placeholder="quantidade..."> 
+        <button id ="btn" onclick="persistencia(Event)">enviar</button>
     </form>
     <script src="compras.js"></script>
 </body>

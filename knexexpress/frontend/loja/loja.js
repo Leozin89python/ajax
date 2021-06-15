@@ -60,9 +60,14 @@ function request() {
 
                             let conteiner = document.querySelector('.card')
                             conteiner.append(conteinerMercadoria)
+
+                            let erro = document.getElementById('erro')
+                            erro.style.display = 'none'
                         })
                     })
-                    .catch(err => alert('erro:' + err))
+                    .catch(() => 
+                        erro.style.display = 'flex'
+                    )
 }
 
 request()
@@ -80,8 +85,7 @@ function buscaPor(){
                     .then(produtos => produtos.json())
                     .then(produtos => {
                         produtos.map(mercadoria =>{
-                            //id,item,categoria,descricao,distribuidor,quantidade,preco 
-                            if(busca === mercadoria.item){
+                            if(busca === mercadoria.item ){
                                 alert(
                                     'id:' + mercadoria.id +',' 
                                         + 'item:' + mercadoria.item + ','   
