@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="index.css"/>
     </head>
     <body>
-        <h2>Page using Jboss 6.4 server in port --http://localhost:8080/application1.1/--</h2>
+        <h2>Page using Jboss 7.1 server in port --http://localhost:8080/application1.1/--</h2>
         <br>
         <h4>
             call api using fetch -- http://localhost:3000 --
