@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }input{
+                margin: 2em 0;
+                height: 40px;
+                width: 250px;
+                border-radius: 6px;
+                padding: 0.3em;
+                outline: none;
+                border: none;
+            }button{
+                height: 40px;
+                width: 250px;
+                margin: 0.5em 0;
+                border-radius: 6px;
+                background-color: rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                color: wheat;
+            }
+            button:hover{
+                background-color: whitesmoke;
+                color: rgba(0, 0, 0, 0.5);
+            }textarea{
+                margin: 1em 0;
+                height: 300px;
+                width: 850px;
+                border-radius: 6px;
+                outline: none;
+                border: none;
+                overflow-x: hidden;
+                overflow-y: scroll;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                font-size: x-large;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>programa</h1>
+        </header>
+        <input id="item" placeholder="item..."/>
+        <input id="qtde" placeholder="quantidade..."/>
+        <button id="requerir" onclick="requisicao(Event)">requerir</button>
+        <button id="enviar" onclick="insercao(Event)">enviar</button>
+        <button id="limpar" onclick="limpar(Event)">limpar</button>
+
+        <textarea id="ready" readonly>
+
+        </textarea>
+
+        <script>
+           function insercao() {
+                 let item = document.getElementById('item').value
+                 let qtde = document.getElementById('qtde').value
+
+                const url = 'http://localhost:3000/insert'
+
+                let dados = {
+                    item,
+                    qtde
+                }
+
+                const _METHODS = {
+                    method :'POST',
+                    status :201,
+                    cache :'default',
+                    headers :{
+                        'content-type':'application/json'
+                    },
+                    body : JSON.stringify(dados)
+                }
+
+                fetch(url, _METHODS)
+                                .then(response => response.json())
+                                .then(response => response)
+                                .catch(err => alert('Ero:' + err))
+
+                limpar()
+           }
+
+           function requisicao() {
+                const url = 'http://localhost:3000/'
+
+                const _METHODS = {
+                    method :'GET',
+                    status :200,
+                    cache :'default'
+                }
+
+                fetch(url, _METHODS)
+                                .then(response => response.json())
+                                .then(response => {
+                                    response.map(e => {
+                                        let idBk   = '[ID:' + e.id 
+                                        let itemBk = 'ITEM:' + e.item
+                                        let qtdeBk = 'QUANTIDADE:' + e.qtde + ']'
+
+                                        let dados = []
+                                        dados.push([idBk, itemBk, qtdeBk])
+
+                                        let ready = document.getElementById('ready')
+                                        ready.append(dados)
+                                    })
+                                })
+                                .catch(err => alert('Erro:' + err))
+           }
+
+           function limpar() {
+                 let item = document.getElementById('item')
+                 let qtde = document.getElementById('qtde')
+
+                 item.value  = ''
+                 qtde.value  = ''
+           }
+       
+           function test() {
+                let item = document.getElementById('item').value
+                let qtde = document.getElementById('qtde').value
+                let ready = document.getElementById('ready')
+            
+               let dados = []
+               dados.push([item, qtde])
+               
+               ready.append(dados)
+            }
+
+            
+           document.onClick = addEventListener('click',(e) => {
+                e.preventDefault()
+           })
+
+        </script>
+    </body>
+</html>
