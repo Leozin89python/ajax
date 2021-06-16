@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input id="id" placeholder="id..."/>
+    <input id="item" placeholder="item..."/>
+    <input id="preco" placeholder="preco..."/>
+    <button id="enviar" onclick="responseData(Event)">carregar</button>
+    <button id="enviar" onclick="loadData(Event)">enviar</button>
+    <button id="deletar" onclick="deleteData(Event)">deletar</button>
+    <button id="limpar" onclick="clearData(Event)">limpar</button>
+
+    <script>
+        function responseData() {
+            let id = document.getElementById('id').value
+            let item = document.getElementById('item').value
+            let preco = document.getElementById('preco').value
+            
+            const url = 'http://localhost:3000/' 
+            const _METHODS = {
+                method :'GET',
+                cache :'default',
+                status :200
+            }
+            fetch(url,_METHODS)
+                .then(res => res.json())
+                .then(res =>{
+                    res.map(e =>{
+                        let idB = e.id
+                        let itB = e.item
+                        let prB = e.preco
+
+                        let idP = document.createElement('p')
+                        idP.append(idB)
+                        let itP = document.createElement('p')
+                        itP.append(itB)
+                        let prP = document.createElement('p')
+                        prP.append(prB)
+
+
+                        document.body.append(idP)
+                        document.body.append(itB)
+                        document.body.append(prP)
+                    })
+                })
+                .catch(err => alert(err))
+
+        }
+
+
+        function loadData(){
+            let id = document.getElementById('id').value
+            let item = document.getElementById('item').value
+            let preco = document.getElementById('preco').value
+            let dados = {
+                        id,
+                        item,
+                        preco
+            }
+
+            const url = 'http://localhost:3000/insert' 
+
+            const _METHODS = {
+                method :'POST',
+                cache :'default',
+                status :201,
+                body: JSON.stringify(dados),
+                headers :{
+                    'Content-Type': 'application/json'
+                }
+            }
+
+            fetch(url,_METHODS)
+                        .then(res => res.json())
+                        .then(res => {
+                            return JSON.parse(res)
+                        })
+                        .catch(err => alert(err))
+
+        }
+
+        function deleteData() {
+            let id = document.getElementById('id').value
+
+            const url = 'http://localhost:3000/delete' 
+
+            const _METHODS = { method :'DELETE', status :204}
+
+            fetch(url, _METHODS)
+                        .then(res => res.json())
+                        .then(res =>res)
+                        .catch(err => alert(err))
+        }
+
+        function clearData() {
+            let id = document.getElementById('id')
+            let item = document.getElementById('item')
+            let preco = document.getElementById('preco')
+
+            id.value = ''
+            item.value = ''
+            preco.value = ''
+
+        }
+    </script>
+</body>
+</html>
