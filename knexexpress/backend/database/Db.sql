@@ -6,7 +6,6 @@ DROP DATABASE knexexpress2;
 SELECT * FROM products;
 SELECT * FROM cliente;
 
-
 CREATE VIEW v_prod AS DROP TABLE products;
 SELECT * FROM v_prod;
 

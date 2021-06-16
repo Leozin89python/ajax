@@ -94,16 +94,24 @@ function buscaPor(){
                                                     + 'quantidade:' + mercadoria.quantidade + ','
                                                         + 'preco :' + mercadoria.preco  
                                             ) 
+                                            clear()
                             }else if(busca != mercadoria.item){
+                                clear()
                                 return []
                             }
                             else{
                                 alert('produto não encontrado!')
+                                clear()
                             }
                         })
                     })
                     .catch(err => console.log(err))
                    
+}
+
+function clear() {
+    let busca = document.getElementById('busca')
+    busca.value = '' 
 }
 
 document.onchange = addEventListener('change',()=>{
