@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#data h4{
+    background-color: aqua;
+    color: darkred;
+    padding: 0.5em;
+}
