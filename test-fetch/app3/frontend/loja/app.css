@@ -1,0 +1,207 @@
+#hd{
+        grid-area: hd;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: flex-start;
+        font-size: 4em;
+    }
+#hd :first-child{
+        margin:0.3em;
+        background: linear-gradient(67deg, red 45%, darkred 55%);
+        padding: 0.3em;        
+}
+#hd p{
+    font-size: medium;
+    margin-left: 45em;
+    background-color: white;
+    color: brown;
+    padding: 0.3em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#hd p:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: red;
+}
+#nv{
+        grid-area: nv;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 0.2em;
+    }
+#nv :first-child{
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding: 0.5em;
+}
+#nv #rd{
+    margin-top: 4em;
+    margin-bottom: 0.5em;
+    height: 9em;
+    border: none;
+    outline: none;
+    padding: 0.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: x-large;
+}
+#nv :last-child{
+    width: 6em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 6px;
+    margin-left: 95px;
+    font-weight: bold;
+}
+#nv :last-child:hover{
+    background: white;
+    color: black;
+}
+#login{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+    width: 350px;
+    background: linear-gradient(67deg, whitesmoke 45%, darkblue 55%);
+
+    box-shadow: darkred 4px 4px 4px;
+    position: fixed;
+}
+#nome, #senha{
+    width: 24em;
+    padding: 0.5em;
+    border-radius: 6px;
+    margin: 0.2em;
+
+    outline: none;
+    border: none;
+}
+#entrar{
+    width: 6em;
+    margin: 0.6em;
+    padding: 0.3em;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-left: 19em;
+
+    background-color: white;
+    color: black;
+
+    cursor: pointer;
+}
+#entrar:hover{
+    background-color: black;
+    color: white;
+}
+#card{
+    color: black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+span{
+    border: solid 1px black;
+    height: 400px;
+    width: 220px;
+
+    margin: 0.3em  3em;
+
+    border-radius: 6px;
+    background-color: black;
+
+    padding: 0.3em;
+    color: whitesmoke;
+
+    box-shadow: darkred 4px 4px 4px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0.5em;
+
+}
+span strong{
+    font-size: 40px;
+}
+span h5{
+    font-size: 20px;
+    background: linear-gradient(63deg, blue 45%, darkblue 55% );
+    width: 80%;
+    padding: 0.8em;
+    border-radius: 6px;
+}
+span h6{
+    font-size: 20px;
+    letter-spacing: 0.2em;
+}
+span h6::first-letter{
+    color: goldenrod;
+    font-size: 24px;
+}
+span :last-child{
+    color: brown;
+    text-shadow: white 1px 1px 1px;
+}
+span :last-child::first-letter{
+    color: brown;
+
+}
+#mn{
+        grid-area: mn;
+        padding: 2em;
+
+        background:whitesmoke;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+#ft{
+        grid-area: ft;
+        background:linear-gradient(63deg, red 45%, darkred 55%);
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+#ft :last-child{
+    font-size: x-small;
+    margin-right: 0.4em;
+}
+body{
+        margin: 0;
+        background:black;
+        color: white;
+
+        overflow: hidden;
+
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 50px 525px 50px;
+        grid-template-areas: 
+            'hd hd'
+            'nv mn'
+            'ft ft'
+        ;
+    }

@@ -1,0 +1,34 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>&reg;Loja</title>
+        <link rel="stylesheet" href="app.css"/>
+    </head>
+    <body>
+        <header id="hd">
+            <strong>Loja</strong>
+            <p id="lg" onclick="logar(Event)">login</p>
+        </header>
+        <nav id="nv">
+            <input id="bc" placeholder="buscar..."/>
+            <textarea id="rd" readonly></textarea>
+            <button onclick="limpar(Event)">limpar</button>
+        </nav>
+        <main id="mn">
+            <div id="login">
+                <input id="nome" type="text" placeholder="nome..."/>
+                <input id="senha" type="password" placeholder="senha..."/>
+                <button id="entrar" onclick="autenticar(Event)">entrar</button>
+            </div>
+            <div id="card">
+
+            </div>
+        </main>
+        <footer id="ft"><p>&reg;2021 loja possui todos os seus direitos reservados. </p></footer>
+        <script src="app.js"></script>
+    </body>
+</html>
+
+
+
