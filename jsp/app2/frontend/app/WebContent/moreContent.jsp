@@ -46,6 +46,16 @@
 				<br />
 				<input id="sexo" type="text" name="sexo"  placeholder="sexo...">
 				<br />
+				<input id="ano" type="text" placeholder="ano...">
+				<br />
+				<input id="comentario" type="text" placeholder="comentario...">
+				<br />		
+						
+				<!-- Expression Language -->
+				<!-- ano : ${param.ano}   --> 
+				<!-- comentario : ${param.comentario} --> 
+		
+				
 				<input type="submit" value="testar">
 			</form>
 			

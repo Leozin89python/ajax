@@ -28,6 +28,10 @@
 			<jsp:getProperty property="idade" name="usuario"/>
 			<br />
 			<jsp:getProperty property="sexo" name="usuario"/>
+			<br />
+			<jsp:getProperty property="ano" name="usuario"/>
+			<br />
+			<jsp:getProperty property="comentario" name="usuario"/>
 		<hr>	
 	<%@ include file="footer.jsp" %>
 	

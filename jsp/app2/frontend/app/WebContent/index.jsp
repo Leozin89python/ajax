@@ -13,6 +13,7 @@
 	<button id="page" onClick="newPage(Event)">ajax</button>
 	<button onClick="newPage2(Event)">mais conteúdo</button>
 	<button onClick="newPage3(Event)">outro conteúdo</button>
+	<button onClick="newPage4(Event)">Login</button>
 	
 
 	<hr>
@@ -35,6 +36,10 @@
 		
 		function newPage3() {
 			document.location.href = './otherPage.jsp'
+		}
+		
+		function newPage4() {
+			document.location.href = './login.jsp'
 		}
 	</script>
 	
