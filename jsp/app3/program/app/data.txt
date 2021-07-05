@@ -1,0 +1,44 @@
+								/* postgres */
+
+CREATE DATABASE jspapp3;
+
+DROP DATABASE jspapp3;
+
+\c jspapp3
+
+CREATE TABLE appjsp3(
+	id SERIAL PRIMARY KEY  NOT NULL,
+	url VARCHAR(120) NOT NULL
+);
+
+DROP TABLE appjsp3;
+
+INSERT INTO appjsp3 VALUES(1,'http://www.google.com');
+INSERT INTO appjsp3 VALUES(2,'http://www.facebook.com');
+
+SELECT * FROM appjsp3;
+
+
+
+
+
+								/* mySql*/
+
+CREATE DATABASE jspapp3;
+
+DROP DATABASE jspapp3;
+
+USE jspapp3;
+
+CREATE TABLE IF NOT EXISTS appjsp3(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	url VARCHAR(120) NOT NULL
+);
+	
+
+DROP TABLE appjsp3;
+
+INSERT INTO appjsp3 VALUES(1,'http://www.google.com');
+INSERT INTO appjsp3 VALUES(2,'http://www.facebook.com');
+
+SELECT * FROM appjsp3;
