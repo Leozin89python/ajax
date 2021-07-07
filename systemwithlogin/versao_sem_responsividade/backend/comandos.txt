@@ -1,0 +1,19 @@
+ comandos utilizados!
+  
+  node:
+    npm init -y
+    npm i [pacote_a_ser_baixado]
+    npm i [pacote_a_ser_baixado_1] [pacote_a_ser_baixado_2] [pacote_a_ser_baixado_3] [pacote_a_ser_baixado_n]
+  nodemon(package/json):  
+    "start": "nodemon [caminhho_do_arquivo]",
+ knex:
+    "[comando_personalizado]": "knex init",
+    "[comando_personalizado]": "knex migrate:make create_table_[nome_da_tabela]",
+    "[comando_personalizado]": "knex migrate:latest",
+    "[comando_personalizado]": "knex migrate:rollback"
+postgres:
+    psql -U postgres
+    \c
+    \l
+    \c nome_da_database
+    \q

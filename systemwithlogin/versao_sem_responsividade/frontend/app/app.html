@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="app.css">
+    <title>Document</title>
+</head>
+<body>
+   <header><strong>Client control area&reg;</strong></header>
+   <aside>
+       <p id="getOut" onClick="out(Event)">logout</p>
+       <p id="adm" onclick="adm(Event)">adm</p>
+    </aside>
+   <main>
+        <div id="err">
+            <h3>I'm sorry, an error ocurred!</h3>
+            <strong>error 500.</strong>
+        </div>
+
+       <table id="table">
+           <thead>
+               <tr>
+                   <th>id</th>
+                   <th>name</th>
+                   <th>department</th>  
+                   <th>job</th>
+                   <th>salary</th>
+               </tr>
+           </thead>
+           <tbody>
+                    <td id="id"></td>
+                    <td id="name"></td>
+                    <td id="department"></td>  
+                    <td id="job"></td>
+                    <td id="salary"></td>
+           </tbody>
+       </table>
+   </main>
+   <footer>&copy2021 system controls have all rights reserved.</footer>
+
+   <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="card">
+        <form class="conteiner">
+            <strong>Login</strong>
+            <input id="ioLogin" type="password" placeholder="user name" >
+            <input id="ioSenha" type="password" placeholder="password">
+            <input class="btn" type="submit" onclick="load(Event)" value="login">
+        </form>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCDwoQ2omPX569PvdhKT3tJucXURS4Txes",
+          authDomain: "knexexpress-f81e9.firebaseapp.com",
+          databaseURL: "https://knexexpress-f81e9-default-rtdb.firebaseio.com",
+          projectId: "knexexpress-f81e9",
+          storageBucket: "knexexpress-f81e9.appspot.com",
+          messagingSenderId: "30950767539",
+          appId: "1:30950767539:web:eb640625617bbeed4469c6"
+        };
+        // Initialize Firebase
+        //firebase.initializeApp(firebaseConfig);
+        if(!firebase.apps.length){
+              firebase.initializeApp(firebaseConfig);
+          } 
+      </script>
+      <script src="login.js"></script>
+</body>
+</html>

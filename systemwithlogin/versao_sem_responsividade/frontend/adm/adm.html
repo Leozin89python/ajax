@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="adm.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        
+      <div id="return">
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-dark" onclick="back(Event)">back</button>
+          </div>
+      </div>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Administration&reg;</h1>
+              <p class="lead">form to insert data of workers!</p>
+            </div>
+          </div>
+
+          <hr>
+    </div>
+
+    <div id="main">
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="name" placeholder="name">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="department" placeholder="department">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="job" placeholder="job">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="salary" placeholder="salary">
+          </div>
+
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-danger" onclick="post(Event)">send</button>
+          </div>
+
+    </div>
+
+    <div id="footer">
+
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">
+                <strong>&copy2021 system controls have all rights reserved.</strong>
+            </a>
+          </nav>
+          
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="adm.js"></script>
+</body>
+</html>

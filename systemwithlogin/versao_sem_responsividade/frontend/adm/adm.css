@@ -1,0 +1,33 @@
+#header{
+    grid-area: header;
+}
+#return{
+    padding: 1vh;
+}
+#main{
+    grid-area: main;
+    padding: 3vh;
+}
+#footer{
+    grid-area: footer;
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#footer strong{
+    font-size: x-small;
+}
+body{
+    overflow:hidden;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 370px 100px;
+    grid-template-areas:
+        'header  header'
+        'main      main'
+        'footer  footer' 
+    ;
+}
