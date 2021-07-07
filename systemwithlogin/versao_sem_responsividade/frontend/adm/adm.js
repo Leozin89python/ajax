@@ -49,11 +49,26 @@ function post(){
     clear()
 }
 function clear() {
+    let id = document.getElementById('idGet')
     let name = document.getElementById('name')
     let department = document.getElementById('department')
     let job = document.getElementById('job')
     let salary = document.getElementById('salary')
 
+    id.value = ''
+    name.value = ''
+    department.value = ''
+    job.value = ''
+    salary.value = ''
+}
+function clearFields() {
+    let id = document.getElementById('idGet')
+    let name = document.getElementById('name')
+    let department = document.getElementById('department')
+    let job = document.getElementById('job')
+    let salary = document.getElementById('salary')
+
+    id.value = ''
     name.value = ''
     department.value = ''
     job.value = ''
