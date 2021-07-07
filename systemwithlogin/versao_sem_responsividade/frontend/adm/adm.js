@@ -96,7 +96,7 @@ function getById() {
 }
 document.oninput = addEventListener('input',() => {
         let id = document.getElementById('idGet').value
-        while(id != '') {
+       if(id != '') {
             getById()
         }
 })
