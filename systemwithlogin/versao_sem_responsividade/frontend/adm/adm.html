@@ -27,22 +27,31 @@
 
     <div id="main">
 
-          <div class="mb-3">
-            <input type="text" class="form-control" id="name" placeholder="name">
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control" id="department" placeholder="department">
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control" id="job" placeholder="job">
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control" id="salary" placeholder="salary">
-          </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <input type="number" id="idGet" class="form-control" placeholder="id">
+        </div>
+      </div>  
 
-          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-danger" onclick="post(Event)">send</button>
-          </div>
+      <div class="mb-3" >
+        <input type="text" class="form-control" id="name" placeholder="name"></input>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" id="department" placeholder="department"></input>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" id="job" placeholder="job"></input>
+      </div>
+
+      <div class="mb-3">
+        <input type="number" class="form-control" id="salary" placeholder="salary"></input>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-danger" onclick="post(Event)">send</button>
+      </div>
 
     </div>
 

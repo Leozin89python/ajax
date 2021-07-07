@@ -8,6 +8,9 @@
     grid-area: main;
     padding: 3vh;
 }
+#idGet{
+    margin-bottom: 3vh;
+}
 #footer{
     grid-area: footer;
 }
