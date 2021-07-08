@@ -1,4 +1,5 @@
 //login: adm, 1234
+//http://localhost:3000
 //http://localhost:3000/insert
 //http://localhost:3000/:id
 //http://localhost:3000/update/:id
@@ -113,19 +114,10 @@ function getById() {
                     })
                 })
 }
-document.oninput = addEventListener('input',() => {
-       let id = document.getElementById('idGet').value
-           if(id != ''){
-                getById()
-                showButton()
-           }else{
-                clearFields()
-                document.location.reload()
-           }
-})
+
 function deletePeople() {
     let id = document.getElementById('idGet').value
-    const url = `http://localhost:3000/delete/:${id}`
+    const url = `http://localhost:3000/delete/${id}`
 
     let config  = {
         method :'DELETE',
@@ -138,15 +130,64 @@ function deletePeople() {
                     .then(res => res.json())
                     .then(res => res)
                     .catch(err => console.log(err))
+
+    clearFields()
 }
 function showButton() {
-    let updateButton   = document.getElementById('update')
     let deleteButton = document.getElementById('delete')
     let sendButton   = document.getElementById('send')
-    let clearButton = document.getElementById('clear')
+    let updateButton = document.getElementById('update')
+    let editButton   = document.getElementById('edit')
+    let normalButton = document.getElementById('normal')
 
-    updateButton.style.display = 'flex'
+  
     deleteButton.style.display = 'flex'
+    updateButton.style.display = 'flex'
     sendButton.style.display   = 'none'
-    clearButton.style.display  = 'none'
+    editButton.style.display   = 'none'
+    normalButton.style.display = 'flex'
 }
+function updatePeople() {
+        let id = document.getElementById('idGet').value
+        const url = `http://localhost:3000/update/${id}`
+
+        let name = document.getElementById('name').value
+        let department = document.getElementById('department').value
+        let job = document.getElementById('job').value
+        let salary = document.getElementById('salary').value
+
+        let data = {
+            name,
+            job,
+            department,
+            salary
+    } 
+
+    const config = {
+        method : 'PUT',
+        body :JSON.stringify(data),
+        headers :{
+            'Content-Type': 'application/json'
+        },
+        mode: 'cors',
+        cache :'default',
+        status :201,
+    }
+
+    fetch(url,config)
+                    .then(res => res.json())
+                    .then(res => res)
+                    .catch(err => console.log(err))
+
+    document.location.reload()
+}
+
+function editMode() {
+     showButton()
+}
+function normal() {
+    document.location.reload()
+}
+
+
+

@@ -14,7 +14,7 @@
 #send, #clear{
 
 }
-#update,#delete{
+#update,#delete, #normal{
     display: none;
 }
 #footer{

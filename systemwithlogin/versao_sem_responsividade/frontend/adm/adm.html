@@ -31,7 +31,7 @@
         <div class="col-auto">
           <input type="number" id="idGet" class="form-control" placeholder="id">
         </div>
-      </div>  
+      </div>   
 
       <div class="mb-3" >
         <input type="text" class="form-control" id="name" placeholder="name"></input>
@@ -56,17 +56,27 @@
       <div class="btn-group" role="group" aria-label="Basic mixed styles example">
         <button type="button" class="btn btn-warning" id="clear" onclick="clearFields(Event)">clear</button>
       </div>
- 
+
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-secondary" id="query" onclick="getById(Event)">query</button>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-dark" id="edit" onclick=" editMode(Event)">edit</button>
+      </div>
 
     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-      <button type="button" class="btn btn-secondary" id="update" onclick="">update</button>
+      <button type="button" class="btn btn-secondary" id="update" onclick="updatePeople(Event)">update</button>
     </div>
 
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button type="button" class="btn btn-danger" id="delete" onclick="deletePeople(Event)">delete</button>
+  </div>
 
   <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-    <button type="button" class="btn btn-danger" id="delete" onclick="">delete</button>
+    <button type="button" class="btn btn-dark" id="normal" onclick="normal(Event)">normal mode</button>
   </div>
-  
+
 </div>
 
   
