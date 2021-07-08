@@ -11,6 +11,12 @@
 #idGet{
     margin-bottom: 3vh;
 }
+#send, #clear{
+
+}
+#update,#delete{
+    display: none;
+}
 #footer{
     grid-area: footer;
 }

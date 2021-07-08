@@ -1,4 +1,8 @@
 //login: adm, 1234
+//http://localhost:3000/insert
+//http://localhost:3000/:id
+//http://localhost:3000/update/:id
+//http://localhost:3000/delete/:id
 
 function back() {
     document.location.href = '../app/app.html'
@@ -110,8 +114,42 @@ function getById() {
                 })
 }
 document.oninput = addEventListener('input',() => {
-        let id = document.getElementById('idGet').value
-       if(id != '') {
-            getById()
-        }
+       let id = document.getElementById('idGet').value
+           if(id != ''){
+                getById()
+                showButton()
+           }else{
+                clearFields()
+                document.location.reload()
+           }
 })
+function normalOperation(){
+    document.location.reload()
+}
+function deletePeople() {
+    let id = document.getElementById('idGet').value
+    const url = `http://localhost:3000/delete/:${id}`
+
+    let config  = {
+        method :'DELETE',
+        cache  :'default',
+        mode   :'cors',
+        status :204
+    }
+
+    fetch(url,config)
+                    .then(res => res.json())
+                    .then(res => res)
+                    .catch(err => console.log(err))
+}
+function showButton() {
+    let updateButton   = document.getElementById('update')
+    let deleteButton = document.getElementById('delete')
+    let sendButton   = document.getElementById('send')
+    let clearButton = document.getElementById('clear')
+
+    updateButton.style.display = 'flex'
+    deleteButton.style.display = 'flex'
+    sendButton.style.display   = 'none'
+    clearButton.style.display  = 'none'
+}
