@@ -155,6 +155,17 @@ function updatePeople() {
         let job = document.getElementById('job').value
         let salary = document.getElementById('salary').value
 
+        if(  name == '' || name == null ||
+        department == '' || department == null || 
+        job == '' || job == null ||
+        salary == '' || salary == null ) {
+            
+           let alerted =  alert('please, enter data and all form fields!') 
+           let clean   = clear()
+           
+           return {  alerted, clean  }
+       } 
+
         let data = {
             name,
             job,
