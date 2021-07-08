@@ -123,9 +123,6 @@ document.oninput = addEventListener('input',() => {
                 document.location.reload()
            }
 })
-function normalOperation(){
-    document.location.reload()
-}
 function deletePeople() {
     let id = document.getElementById('idGet').value
     const url = `http://localhost:3000/delete/:${id}`
