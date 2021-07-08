@@ -114,7 +114,6 @@ function getById() {
                     })
                 })
 }
-
 function deletePeople() {
     let id = document.getElementById('idGet').value
     const url = `http://localhost:3000/delete/${id}`
@@ -181,7 +180,6 @@ function updatePeople() {
 
     document.location.reload()
 }
-
 function editMode() {
      showButton()
 }
