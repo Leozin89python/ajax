@@ -1,0 +1,25 @@
+Neste último exercício, finalmente cheguei ao completo crud,
+frontend, backend e database.
+
+Tive alguns desafios:
+1 - erro de post, o browser retorna um erro devido a dados 
+inconsistentes, visto que o último dado exigido na api seria
+ um tipo(NUMBER) e eu inseri uma STRING no input final
+etse gera um erro: 404 not found(url). 
+Devido as inconsistências dos dados.
+2 - input blocked, eu utilizei um evento na DOM
+document.oninput = addEventListener(Event,callback); com
+o intuito de ao inserir um valor no input id, os outros
+campos sofressem alteração dinâmicamente porém,
+esta ação gerou uma alteração em todos os inputs do documento
+fazendo com que eles recebem estáticamente o value da api
+impedindo os demais campos de alterarem seus dados a partir
+dos dados recebidos da api. 
+visto que só era necessário a alteração em um único input o
+de id = id, a solução foi criar um botão de pesquisa para 
+retornar os dados do método getById() que percorre todos os 
+campos e os inseri em seus respectivos inputs. Desta forma 
+pude percorrer cada valor inserido a partir do parâmetro 
+inserido no input de id e a consulta a partir do button 
+query requisitando uma fetch ordenada pelo id passado e
+obtendo total liberdade para a edição dos campos.
