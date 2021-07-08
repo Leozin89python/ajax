@@ -1,0 +1,28 @@
+atividade de crud completa com autenticação
+básica e sem responsividade em seu layout
+back-end e front-end,
+utilizando as ferramentas:
+
+    infra:
+        github
+
+    database:
+        postgres
+        firebase
+
+    back-end:
+        knex
+        express
+        node.js
+        consign
+        cors
+        nodemon
+        javascript
+
+    front-end:
+        html5
+        css3
+        javascript
+        bootstrap
+        jquery
+

@@ -11,9 +11,6 @@
 #idGet{
     margin-bottom: 3vh;
 }
-#send, #clear{
-
-}
 #update,#delete, #normal{
     display: none;
 }
