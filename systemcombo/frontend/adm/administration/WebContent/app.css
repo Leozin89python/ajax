@@ -1,0 +1,42 @@
+body{
+   height: 100%;
+   width: 100%
+   overflow:hidden;
+}
+#header{
+	grid-area:header;
+}
+#main{
+	grid-area:main;
+	
+	padding: 1em;
+}
+#footer{
+	grid-area:footer;
+	
+	padding:0.2em;
+	
+	font-size:x-small;
+	font-weight:bold;
+	
+	display: flex;
+	flex-direction:flex-end;
+	justify-content:flex-end;
+	align-items: flex-end;
+}
+.responsive{
+	height: 100vh;
+	width: 100vw;
+	
+	display: grid;
+	grid-template-columns:100%;
+	grid-template-rows:30% 60% 10%;
+	grid-template-areas:
+		'header  header'
+		'main      main'
+		'footer  footer'
+	;	
+}
+#header{
+	padding: 1em;
+}
