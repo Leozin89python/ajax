@@ -12,4 +12,4 @@ obtive alguns desafios com este sistema:
 		resolvido com a inserção deste atributo:
 				
 				problema: private static String banco = "jdbc:mysql://localhost:3306/admin_combo";		
-					solução: private static String banco = "jdbc:mysql://localhost:3306/admin_combo?useTimezone=true&serverTimezone=UTC";
+					solução: private static String banco = "jdbc:mysql://localhost:3306/admin_combo?useTimezone=true&serverTimezone=UTC";                             
