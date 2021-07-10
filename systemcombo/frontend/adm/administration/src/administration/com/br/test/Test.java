@@ -9,7 +9,7 @@ import administration.com.br.err.Err;
 
 public class Test {
 
-	public static void main(String[] args) {
+	//public static void main(String[] args) {}
 			
 		 Auth con = new Auth();
     	 Connection conect =  con.getConnection();
@@ -17,33 +17,42 @@ public class Test {
 		 Statement st = null;
 		 ResultSet rs = null;
 		
-	      try {
-	    	  String sql = "SELECT * FROM adm";  
-	    	  st = conect.createStatement();
-	    	  rs = st.executeQuery(sql);
-	    	  
-	    	  while(rs.next()) {
-	    		  System.out.println(rs.getInt("id") 
-	    				  				+ "," 
-	    				  				+ rs.getString("user") 
-	    				  			    +	"," 
-	    				  				+ rs.getString("password"));
-	    	  }
-	    	  
-		} catch (Exception e) {
-			
-		}finally {
-			
-			try {
+		 
+		 public void returnData() {
+			 	
+		      try {
+		    	  String sql = "SELECT * FROM adm";  
+		    	  st = conect.createStatement();
+		    	  rs = st.executeQuery(sql);
+		    	  
+		    	  while(rs.next()) {
+		    		  System.out.println(rs.getInt("id") 
+		    				  				+ "," 
+		    				  				+ rs.getString("user") 
+		    				  			    +	"," 
+		    				  				+ rs.getString("password"));
+		    	  }
+		    	  
+			} catch (Exception e) {
 				
-				conect.close();
-				st.close();
-				rs.close();
+			}finally {
 				
-			}catch (Exception e) {
-				throw new Err(e);
+				try {
+					
+					conect.close();
+					st.close();
+					rs.close();
+					
+				}catch (Exception e) {
+					throw new Err(e);
+				}
+				
 			}
-			
-		}
-	}
+			 
+		 }
+		 
+		 
+		 
+		 
+	
 }

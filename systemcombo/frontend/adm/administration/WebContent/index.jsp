@@ -57,6 +57,15 @@
 				<input type="number" class="form-control" id="price"placeholder="price"></input>
 			</div>
 			
+			
+				<div class="btn-group" role="group"
+					aria-label="Basic mixed styles example">
+					<button type="button" class="btn btn-primary" onclick="">
+							<%-- amanhã eu termino  --%>
+					</button>
+				</div>
+			
+			
 		</div>
 
 		<div id="footer">
