@@ -1,0 +1,14 @@
+CREATE DATABASE test;
+DROP DATABASE test;
+
+\c test
+
+CREATE TABLE IF NOT EXISTS testing(
+	id SERIAL,
+	data VARCHAR(50)
+);
+DROP TABLE testing;
+
+INSERT INTO testing VALUES(1,'test');
+
+SELECT * FROM testing;
