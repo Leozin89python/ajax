@@ -1,0 +1,62 @@
+html, body {
+  margin: 0; }
+
+body header, body main, body footer {
+  border: 1px solid darkred; }
+
+body {
+  background: black;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; }
+  body text {
+    align: center; }
+  body header {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  body main {
+    height: 60vh;
+    width: 100%; }
+    body main div {
+      padding: 1em; }
+      body main div input {
+        height: 3em;
+        width: 24em;
+        padding: 1em; }
+      @media (max-device-width: 600px) {
+        body main div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          body main div input {
+            height: 3em;
+            width: 80%;
+            margin: 1em 0; }
+          body main div button {
+            height: 5em;
+            width: 80vw; } }
+      body main div button {
+        height: 3em;
+        width: 24em;
+        cursor: pointer;
+        font-weight: bold; }
+        body main div button:hover {
+          background: white;
+          color: darkred; }
+  body footer {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center; }

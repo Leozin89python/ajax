@@ -1,0 +1,111 @@
+$screen:black;
+$text:#fff;
+$maximun:100%;
+$pddig:1em;
+$strong:bold;
+@mixin scr($display, $direction, $content, $items){
+	display:$display;
+	flex-direction:$direction;
+	justify-content:$content;
+	align-items:$items;
+}
+@mixin space($height, $width){
+	height:$height;
+	width:$width;
+}
+html{
+	margin:0;
+}
+%test{
+	border:1px solid darkred;
+}
+body{
+	@extend html;
+	background:$screen;
+	height:$maximun;
+	width:$maximun;
+	color:$text;
+	@include scr(flex,column,center,center);
+	text{
+		align:center;
+	}
+	header{
+		@include space(30vh, 100%)
+		@extend %test;
+		@include scr(flex,column,center,center);
+	}
+	main{
+		@include space(60vh, 100%)
+		@extend %test;
+		div{
+			padding:$pddig;
+			input{
+				@include space(3em,24em)
+				padding:$pddig;
+			}
+			@media(max-device-width:600px){
+				@include scr(flex,column,center,center);
+				input{
+						@include space(3em, 80%)
+						margin: 1em 0;
+				}
+				.button{
+					@include space(5em, 80vw)
+				}
+			}
+			.button{
+				@include space(3em,24em)
+				cursor:pointer;
+				font-weight:$strong;
+				&:hover{
+					background:white;
+					color:darkred;
+				}
+			}
+		}
+	}
+	footer{
+		@include space(10vh, 100%)
+		@extend %test;
+		@include scr(flex,row,flex-end,center);
+	}
+	overflow:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
